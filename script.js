@@ -86,20 +86,20 @@ function generateBookDisplay(book, writer, pages, read){
         bookContainerEl.removeChild(bookElement);
     })
 
-    // read function //
-    let toggle = false;
-    readBookEl.addEventListener('click', function (){
+    // read function // // need help in this  i got confuse uff;
+    // let toggle = false;
+    // readBookEl.addEventListener('click', function (){
         
-        if(toggle == true){
-            readBookEl.innerText = "Read";
+    //     if(toggle == true){
+    //         readBookEl.innerText = "Read";
         
-        }
-        readBookEl.innerText = "Reading..";
-         toggle = true;
+    //     }
+    //     readBookEl.innerText = "Reading..";
+    //      toggle = true;
 
         
         
-    })
+    // })
  
 }
 const bookElement = document.querySelector(".bookInfo");
