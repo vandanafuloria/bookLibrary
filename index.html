@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+ </head>
+ <body>
+    <h1>YOUR LIBRARY</h1>
+    <div class="main-container">
+       
+       
+        <div class="book-container">
+            <div>
+           <h1>YOU</h1>
+           <h1>ARE</h1>
+           <h1>WHAT</h1>
+           <h1>YOU</h1>
+           <h1>READ</h1>
+            <button class="open">Add Book</button>
+        </div>
+        <div class="content-box">
+        <dialog id="dialogBox">
+            <h2>Add Your Book Here</h2>
+            <form actiffdon="" method="">
+                <label for="bookName">Book</label>
+                <input type="text" name="book" id="bookName" placeholder="Add Book Name" autocomplete="off" required>
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" placeholder="Enter author's name" autocomplete="off" required>
+                <label for="page" >Pages</label>
+                <input type="number" type="text" name="page" id="page" step="10" autocomplete="off" placeholder="Add pages">
+                <h6>Have You Read it Already ?</h6>
+                <input type="checkbox" id="read">
+                <div class="dialogBox-buttons">
+                <button class="close">Close</button>
+                <button class="submit">Submit</button>
+            </div>
+                
+            </form>
+        </dialog>
+    </div>
+</div>
+       
+    </div>
+    <script src="script.js"></script>
+ </body>
+ </html>

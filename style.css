@@ -1,0 +1,170 @@
+@keyframes float {
+    0%, 100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   
+  }
+  body>h1{
+    background-color:#2072b2;
+    color:#d0d5f7;
+    text-align: center;
+    font-size: 5em;
+  }
+  body{
+    background-color: #ffffff;
+  }
+label{ 
+    display: inline-block;
+   width:100px;
+   
+   
+}
+input{
+    width: 150px;
+    background-color:#35114bd3;
+    border:transparent;
+    margin:10px;
+    border-radius: 15px;
+    border-top: 1px solid rgb(39, 25, 196);
+    border-bottom: 1px solid purple;
+    border-left:1px solid purple; 
+    border-right: 1px solid rgb(39, 25, 196); ;
+    padding:10px;
+    color:#d0d5f7;
+   
+}
+input:focus{
+    outline:none;
+}
+#read{
+    width:20px;
+
+}
+
+/* label is inline element so we can not set width of a label directly 
+thats why need to  give inline-block value to set the width;
+*/
+h6{
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 2rem;
+}
+dialog{
+    background-color:  #35114b;
+    width: 300px;
+    min-width: 200px;
+    color:#d0d5f7;
+    transition: ease 0.5s;
+    animation: float 6s ease-in-out infinite;
+    border-radius: 15px;
+    margin:auto;
+    padding:30px;
+    
+  
+}
+dialog:hover{
+    transform: translateY(10px);;
+}
+
+.book-container{
+    
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.book-container div:nth-child(1){
+    background-color: #35114bd3;
+    color:#d0d5f7;
+    flex-basis: 10%;
+    height: 70vh;
+}
+.book-container h1{
+    margin: 1.2em 0.5em;
+    text-align: center;
+    animation: float 5s ease-in-out infinite;
+    transform: translateY(20px);
+    text-shadow: 2px 2px 5px #d0d5f7;
+   
+}
+.bookInfo{
+    text-align: center;
+    background-color: #fbd2ff;
+    height: 200px;
+    margin: 1em;
+    padding:20px;
+   width: 15%;
+   border-radius: 20px;
+   border-top: 2px solid rgb(39, 25, 196);
+    border-bottom: 2px solid purple;
+    border-left:1px solid purple; 
+    border-right: 1px solid rgb(39, 25, 196); 
+    transition: ease 0.5s;
+   
+}
+.bookInfo:hover{
+    transform : scale(1.05);
+}
+.bookInfo:nth-child(even){
+   background-color: #68606726;
+ 
+}
+.bookInfo:nth-child(odd){
+    background-color: #e1e6eb46;
+   
+ }
+ .bookInfo h3{
+    font-size: 1.7em;
+    text-overflow: ellipsis;
+    white-space: nowrap;      /* Prevent text from wrapping */
+    overflow: hidden;         /* Hide overflowing text */
+    text-overflow: ellipsis; 
+    margin:5px 0;
+ }
+ .bookInfo p{
+    margin:1em 0;
+ }
+.content-box{
+    flex-basis: 80% ;
+    display: flex;
+    justify-content: flex-start;
+     flex-wrap: wrap;
+     
+
+}
+.dialogBox-buttons,.displayButtons{
+   display: flex;
+   justify-content: space-between;
+}
+.open{
+    margin-left:1em;
+    margin-top:1em;
+}
+.open, .submit,.close,.delete,.read{
+    padding: 10px 20px;
+    background-color:#2072b2;
+    border-radius: 10px;
+    font-weight: normal;
+    color:white;
+    border:2px solid white;
+ 
+}
+.open:hover, .submit:hover,.close:hover, .read:hover, .delete:hover{
+    background-color: #c0b4ef;
+    color:black;
+    border-top: 1px solid rgb(39, 25, 196);
+    border-bottom: 1px solid purple;
+    border-left:1px solid purple; 
+    border-right: 1px solid rgb(39, 25, 196); 
+
+   
+}
