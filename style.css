@@ -6,6 +6,13 @@
       transform: translateY(10px);
     }
   }
+  :root{
+    --bgColor:rgb(36, 19, 68);
+    --text-shadow:2px 2px 5px white;
+    --font-color:white;
+    
+    
+  }
 
   *{
     margin:0;
@@ -14,10 +21,13 @@
    
   }
   body>h1{
-    background-color:#2072b2;
-    color:#d0d5f7;
+    background-color:var(--bgColor);
+    color:var(--font-color);
     text-align: center;
-    font-size: 5em;
+    font-size: 3em;
+    text-shadow: var(--text-shadow);
+    padding:0.3em;
+    
   }
   body{
     background-color: #ffffff;
@@ -28,7 +38,7 @@ label{
    
    
 }
-input{
+dialog input{
     width: 150px;
     background-color:#35114bd3;
     border:transparent;
@@ -45,6 +55,7 @@ input{
 input:focus{
     outline:none;
 }
+
 #read{
     width:20px;
 
@@ -56,7 +67,7 @@ thats why need to  give inline-block value to set the width;
 h6{
     display: inline-block;
     font-size: 0.8rem;
-    margin: 2rem;
+    margin: 0.3rem;
 }
 dialog{
     background-color:  #35114b;
@@ -79,14 +90,22 @@ dialog:hover{
     
     display: flex;
     justify-content: space-around;
+    /* position: relative;
+     */
 
 }
 
 .book-container div:nth-child(1){
-    background-color: #35114bd3;
-    color:#d0d5f7;
+    background-color:rgb(224, 208, 242);
+    color:var(--bgColor);
     flex-basis: 10%;
+    font-size:0.8em;
+    text-shadow: var(--text-shadow);
     height: 70vh;
+    min-width: 180px;
+    text-align: center;
+    position :sticky;
+    top:0;
 }
 .book-container h1{
     margin: 1.2em 0.5em;
@@ -98,65 +117,70 @@ dialog:hover{
 }
 .bookInfo{
     text-align: center;
-    background-color: #fbd2ff;
-    height: 200px;
+    background-color: rgb(224, 208, 242);
+    /* max-height: 50%;
+    max-width: 25%; */
     margin: 1em;
-    padding:20px;
-   width: 15%;
-   border-radius: 20px;
+    padding:10px 5px;
+    border-radius: 20px;
    border-top: 2px solid rgb(39, 25, 196);
     border-bottom: 2px solid purple;
     border-left:1px solid purple; 
     border-right: 1px solid rgb(39, 25, 196); 
     transition: ease 0.5s;
-   
+    height: 300px;
+    width: 20%;
+    min-width: 230px;  
 }
 .bookInfo:hover{
     transform : scale(1.05);
 }
-.bookInfo:nth-child(even){
-   background-color: #68606726;
- 
-}
-.bookInfo:nth-child(odd){
-    background-color: #e1e6eb46;
-   
- }
+
  .bookInfo h3{
     font-size: 1.7em;
     text-overflow: ellipsis;
-    white-space: nowrap;      /* Prevent text from wrapping */
+    /* white-space: nowrap;      Prevent text from wrapping */
     overflow: hidden;         /* Hide overflowing text */
     text-overflow: ellipsis; 
     margin:5px 0;
  }
  .bookInfo p{
-    margin:1em 0;
+    margin:0.3em 0;
  }
 .content-box{
     flex-basis: 80% ;
     display: flex;
     justify-content: flex-start;
      flex-wrap: wrap;
-     
-
+  
 }
 .dialogBox-buttons,.displayButtons{
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
+}
+.displayButtons{
+    position: relative;
+    bottom: -60px;
+
+}
+
+.open, .submit,.close,.delete,.read{
+    padding: 10px 20px;
+    background-color:var(--bgColor);
+    font-family: monospace;
+    border-radius: 10px;
+    font-weight: normal;
+    color:white;
+    border:2px solid rgb(168, 154, 193);
+ 
 }
 .open{
     margin-left:1em;
     margin-top:1em;
-}
-.open, .submit,.close,.delete,.read{
-    padding: 10px 20px;
-    background-color:#2072b2;
-    border-radius: 10px;
-    font-weight: normal;
-    color:white;
-    border:2px solid white;
- 
+    border-top: 1px solid rgb(39, 25, 196);
+    border-bottom: 1px solid purple;
+    border-left:1px solid purple; 
+    border-right: 1px solid rgb(39, 25, 196); 
 }
 .open:hover, .submit:hover,.close:hover, .read:hover, .delete:hover{
     background-color: #c0b4ef;
@@ -167,4 +191,24 @@ dialog:hover{
     border-right: 1px solid rgb(39, 25, 196); 
 
    
+}
+#file, #id{
+    padding:5px;
+    background-color: none;
+    margin:1em;
+    
+    
+}
+#id::placeholder{
+    text-align: center;
+}
+
+.file-container{
+    margin:1em;
+    display: flex;
+    flex-direction: column;
+   
+}
+input[type="url"]{
+    width: 100px;
 }
