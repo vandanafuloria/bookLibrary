@@ -74,7 +74,7 @@ function getBookElement(book){
     const readBookEl = document.createElement('button');
     readBookEl.classList.add('read');
     deleteBookEl.innerText = "Delete";
-    readBookEl.innerText = "Read";
+    readBookEl.innerText = book.read ? "Read" : "Not Read";
 
     btnBoxEl.append(readBookEl, deleteBookEl);
     bookElement.appendChild(btnBoxEl);
@@ -94,6 +94,12 @@ function getBookElement(book){
         }
         saveToLocalStorage();
        
+    })
+
+    readBookEl.addEventListener('click', () => {
+        book.read = !book.read;
+        readBookEl.innerText = book.read ? "Read" : "Not Read";
+        saveToLocalStorage();
     })
 
     return bookElement;
@@ -158,13 +164,18 @@ buttonEl.addEventListener('click', dialogBoxOpen);
 function initializeApplication (){
     const booksJsonString  = localStorage.getItem('books');
     const parsed = JSON.parse(booksJsonString);
+    if(!parsed) return ;
+    
+    console.log(parsed);
     mylibrary = parsed;
+
     
     // console.log("initialize");
     // console.log(parsed);
     // console.log(parsed.length);
     for(let book of parsed){
         const bookEl = getBookElement(book)
+
         bookContainerEl.appendChild(bookEl);
         console.log(book);
     }
